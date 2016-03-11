@@ -1,0 +1,48 @@
+<template name="addsinger">
+	<div class="container">
+		<div class="row row-layout">
+	        <div class="col-lg-12">
+	        	<div class="col-sm-3">
+					<h1>COL LEFT</h1>
+					{{> sidemenu}}
+				</div>
+				<div class="col-sm-9">
+					<h1>ADD NEW SINGER</h1>
+					<p>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </p>
+		            <form role="form">
+		                <div class="form-group">
+		                    <label>Singer Englist Name</label>
+		                    <input class="form-control" id="enname" required>
+		                </div>
+		                <div class="form-group">
+		                    <label>Singer Khmer Name</label>
+		                    <input class="form-control" id="khname" required>
+		                </div>
+		                <div class="form-group">
+                            <label>Selects Gender</label>
+                            <select class="form-control" id="selectgender" required>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                        </div>
+		                <div class="form-group">
+		                    <label>File input</label>
+		                    <input type="file" id="upload">
+		                </div>
+		                <div class="row pull-right">
+			            	<button type="submit" class="btn btn-primary" id="add-singer">Add Singer</button>
+			            </div>
+		            </form>
+		        </div>
+	        </div>
+	    </div>
+	</div>
+</template>

@@ -1,0 +1,15 @@
+<template name="listsinger">
+	<!-- Page Content -->
+    <div class="container">
+        <h3 class="margin">What singer would you like ?</h3><br>
+        <div class="row">
+        	{{#each getlistsinger}}
+	            <div class="col-sm-3">
+	                <a href="#" id="list"><img data-holder-rendered="true" class="img-circle img-responsive img-center" data-src="holder.js/100%x200" src="uploads/{{getImage imageId}}" width="250" height="250"></a>
+	                <h3>{{khname}}</h3>
+	            </div>
+	        {{/each}}
+        </div>
+        <!-- /.row -->
+    </div>
+</template>

@@ -1,0 +1,46 @@
+<template name="adduser">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3">
+                    {{> sidemenu}}
+                </div>
+                <div class="col-lg-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Add User
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>username</label>
+                                    <input class="form-control" name="username" id="username">
+                                
+                                </div> 
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" type="email" id="email">
+                                </div> 
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password" id="password">
+                                </div> 
+                                <div class="form-group">
+                                    <label>Permission</label>
+                                    <select name="language" id="mySelect" class="form-control">
+                                        <option value="" style="display:none">Select</option>
+                                        {{#each getRoles}}
+                                            <option>{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div> 
+                                <button type="submit" id="btnuser" class="btn btn-default">Add User</button>
+                                <!-- <button type="reset" class="btn btn-default">Close</button> -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

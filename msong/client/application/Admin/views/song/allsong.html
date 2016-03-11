@@ -1,0 +1,57 @@
+<template name="allsong">
+	<div class="container">
+		<div class="row row-layout">
+			<div class="col-md-12">
+				<div class="col-sm-3">
+					<h1>COL LEFT</h1>
+					{{> sidemenu}}
+				</div>
+				<div class="col-sm-9">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            All MP3
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+        					<div class="dataTable_wrapper table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>                                    
+                                            <th>Song Name</th>
+                                            <th>Singer Name</th>
+                                            <th>Album</th>
+                                            <th>Vol</th>
+                                            <th colspan="3">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each getallsong}}
+                                            <tr class="odd gradeX">
+                                                <td>{{index}}</td>
+                                                <td>{{name}}</td>
+                                                <td>{{getsingername singer}}</td>
+                                                <td>{{getalbum album}}</td>
+                                                <td>{{getvolname vol}}</td>
+                                                <td class="center" colspan="3">
+                                                    <a href="#" class="btn btn-primary btn-xs">View</a>
+                                                    <a href="#" id="remove" class="btn btn-danger btn-xs">Delete</a>
+                                                    <a href="/admin/editsong/{{_id}}" class="btn btn-primary btn-xs">Edit</a>
+                                                </td>
+                                            </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pull-right">
+                                <input type="button" value="Prev" id="prev" class="prev">
+                                    <b class="num_page"></b> of <b>10</b>
+                                <input type="button" value="Next" id="next">
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
